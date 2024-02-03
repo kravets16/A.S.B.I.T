@@ -44,12 +44,14 @@
         &-grid {
             grid-template-columns: repeat(2, auto);
             grid-template-rows: repeat(3, auto);
+            column-gap: 15px;
+            row-gap: 15px;
         }
         &-inner {
             padding: 33px 33px 33px 33px;
             img {
-                max-width: 87px;
-                max-height: 30px;
+                max-width: 75px;
+                max-height: 27px;
             }
         }
     }
