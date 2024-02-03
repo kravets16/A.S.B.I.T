@@ -20,6 +20,34 @@ body {
     }
 }
 
+.section-title {
+    font-size: 34px;
+    font-weight: 600;
+    line-height: 140%;
+    &__gradient {
+        background: linear-gradient(90deg, #60b7ff 0%, #e255f3 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 30px;
+    }
+}
+@media (max-width: 575px) {
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+.text-strong {
+    font-weight: 600;
+    &__cap {
+        text-transform: uppercase;
+    }
+}
+
 .btn-color {
     padding: 18px 28px 18px 28px;
     color: $white;
