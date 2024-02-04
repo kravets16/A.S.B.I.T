@@ -1,0 +1,104 @@
+.start {
+    margin: 100px 0 0 0;
+    &-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        column-gap: 20px;
+
+    }
+    &-descr {
+        max-width: 490px;
+        &__subtitle {
+            margin: 10px 0 0 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+        }
+        &__inner {
+            margin: 46px 0 0 65px;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+        &__step {
+            position: relative;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 140%;
+            a {
+                color: $blue;
+                text-decoration: underline;
+                transition: all 0.5s ease;
+                &:hover {
+                    color: $pink;
+                }
+            }
+            &::before {
+                content: attr(data-number);
+                position: absolute;
+                bottom: 0;
+                transform: translateY(-50%);
+                left: -65px;
+                font-size: 30px;
+                font-weight: 600;
+                background: linear-gradient(90deg, #60b7ff 0%, #e255f3 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+    &-pic {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+/* === media === */
+@media (max-width: 768px) {
+    .start {
+        margin: 70px 0 0 0;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(2, auto);
+            row-gap: 50px;
+        }
+        &-pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }    
+}
+
+@media (max-width: 575px) {
+    .start {
+        margin: 60px 0 0 0;
+        &-wrapper {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-rows: repeat(2, auto);
+            row-gap: 21px;
+        }
+        &-descr {
+            max-width: 490px;
+            &__subtitle {
+                margin: 30px 0 0 0;
+                font-size: 14px;
+            }
+            &__inner {
+                margin: 48px 0 0 37px;
+                gap: 34px;
+            }
+            &__step {
+                font-size: 14px;
+                &::before {
+                    left: -35px;
+                    font-size: 25px;
+                }
+            }
+        }
+    }    
+}
